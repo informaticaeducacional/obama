@@ -6,5 +6,5 @@
   
 ## Plataforma desenvolvida utilizando as tecnologias:
   - Java para Web com VRaptor
-  - Framework CSS beado em Material DesignCSS Materialize
+  - Framework CSS beado em Material Design Materialize
   - jQuery
