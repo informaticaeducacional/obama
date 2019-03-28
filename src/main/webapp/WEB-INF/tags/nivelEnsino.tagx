@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div class="container-conteudo container">
+    <h4 class="">OBJETOS DE APRENDIZAGEM</h4>
+    <p style="font-size: 20px;">Para todos os níveis de ensino da Educaçãoo Básica</p>
+    <div class="row">
+        <div id="nivel-ensino" class="col card-nivelensino card-nivelensino s12 m6 l3 scrollspy">
+            <div class="card large " >
+                <div class="card-content" >
+                    <form id="form-infantil" method="post" action="${linkTo[ObjetosAprendizagemController].busca}">
+                        <input type="hidden" name="dadosDaBusca.idNivelEnsino" value="1"/>
+                        <a class="black-text" onclick="document.getElementById('form-infantil').submit();return false;" href="javascript:{}">
+                        <h5 class="center">
+                            <img src="${ctx}/resources/imagens/ensino/infantil.png"/>
+                        </h5>
+                    </a>
+                    </form>
+
+                    <p class="center"><b>EducaÃ§Ã£o Infantil</b></p>
+
+                    <p class="light center">A EducaÃ§Ã£o Infantil Ã© o inÃ­cio e o fundamento do processo educacional. A entrada na creche ou na prÃ©-escola significa, na maioria das vezes, a primeira separaÃ§Ã£o das crianÃ§as dos seus vÃ­nculos afetivos familiares para se incorporarem em uma situaÃ§Ã£o de socializaÃ§Ã£o estruturada.</p>
+                    <div class="card-href center" style=" border-top: 0px;">
+                        <div class="cor-educacaoinfantil">
+                            <form id="form-infantil2" method="post" action="${linkTo[ObjetosAprendizagemController].busca}">
+                                <input type="hidden" name="dadosDaBusca.idNivelEnsino" value="1"/>
+                                <a class="cor-educacaoinfantil" onclick="document.getElementById('form-infantil2').submit();return false;" href="javascript:{}" >
+                                    Consultar Objetos de Aprendizagem...
+                                </a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col card-nivelensino s12 m6 l3">
+            <div class="card large " >
+                <div class="card-content">
+                    <form id="form-anosIniciais" method="post" action="${linkTo[ObjetosAprendizagemController].busca}">
+                        <input type="hidden" name="dadosDaBusca.idNivelEnsino" value="2"/>
+                        <a class="black-text" onclick="document.getElementById('form-anosIniciais').submit();return false;" href="javascript:{}">
+                            <h5 class="center">
+                                <img src="${ctx}/resources/imagens/ensino/anosIniciais.png"/>
+                            </h5>
+                        </a>
+                    </form>
+
+                    <p class="center"><b>Anos Iniciais do Ensino Fundamental</b></p>
+
+                    <p class="light center">Ao longo dos Anos Iniciais, a progressão do conhecimento ocorre pela consolidação das aprendizagens anteriores e pela ampliação das práticas de linguagem e da experiência estática e intercultural das crianças, considerando tanto seus interesses quanto o que ainda precisam aprender.</p>
+                    <div class="card-href center " style=" border-top: 0px;">
+                        <div class="cor-anosiniciais">
+                            <form id="form-anosIniciais2" method="post" action="${linkTo[ObjetosAprendizagemController].busca}">
+                                <input type="hidden" name="dadosDaBusca.idNivelEnsino" value="2"/>
+                                <a onclick="document.getElementById('form-anosIniciais2').submit();return false;" href="javascript:{}">
+                                Consultar Objetos de Aprendizagem...
+                            </a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col card-nivelensino s12 m6 l3">
+            <div class="card large " >
+                <div class="card-content">
+                    <form id="form-anosFinais" method="post" action="${linkTo[ObjetosAprendizagemController].busca}">
+                        <input type="hidden" name="dadosDaBusca.idNivelEnsino" value="3"/>
+                        <a class="black-text" onclick="document.getElementById('form-anosFinais').submit();return false;" href="javascript:{}" >
+                            <h5 class="center">
+                                <img src="${ctx}/resources/imagens/ensino/anosFinais.png"/>
+                            </h5>
+                        </a>
+                    </form>
+
+
+                    <p class="center"><b>Anos Finais do Ensino Fundamental</b></p>
+
+                    <p class="light center">Ao longo dos Anos Finais, os estudantes se deparam com desafios de maior complexidade, sobretudo devido Ã  necessidade de se apropriarem das diferentes lÃ³gicas de organizaÃ§Ã£o dos conhecimentos relacionados Ã s Ã¡reas.</p>
+
+                    <div class="card-href center" style=" border-top: 0px;">
+                        <div class="cor-anosfinais">
+                            <form id="form-anosFinais2" method="post" action="${linkTo[ObjetosAprendizagemController].busca}">
+                                <input type="hidden" name="dadosDaBusca.idNivelEnsino" value="3"/>
+                                <a onclick="document.getElementById('form-anosFinais2').submit();return false;" href="javascript:{}">
+                                    Consultar Objetos de Aprendizagem...
+                                </a>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col card-nivelensino s12 m6 l3">
+            <div class="card large " >
+                <div class="card-content">
+                    <form id="form-ensinoMedio" method="post" action="${linkTo[ObjetosAprendizagemController].busca}">
+                        <input type="hidden" name="dadosDaBusca.idNivelEnsino" value="4"/>
+                        <a class="black-text" onclick="document.getElementById('form-ensinoMedio').submit();return false;" href="javascript:{}">
+                            <h5 class="center">
+                                <img src="${ctx}/resources/imagens/ensino/ensinoMedio.png"/>
+                            </h5>
+                        </a>
+                    </form>
+
+
+
+                    <p class="center"><b>Ensino MÃ©dio</b></p>
+
+                    <p class="light center">O ensino mÃ©dio deve ser planejado em consonÃ¢ncia com as caracterÃ­sticas sociais, culturais e cognitivas do sujeito humano referencial desta Ãºltima etapa da EducaÃ§Ã£o BÃ¡sica: adolescentes, jovens e adultos.</p>
+                    <div class="card-href center" style=" border-top: 0px;">
+                        <div class="cor-ensinomedio">
+                            <form id="form-ensinoMedio2" method="post" action="${linkTo[ObjetosAprendizagemController].busca}">
+                                <input type="hidden" name="dadosDaBusca.idNivelEnsino" value="4"/>
+
+                                <a onclick="document.getElementById('form-ensinoMedio2').submit();return false;" href="javascript:{}">
+                                Consultar Objetos de Aprendizagem...
+                            </a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

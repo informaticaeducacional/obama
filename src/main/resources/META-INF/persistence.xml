@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+             version="2.1">
+
+    <persistence-unit name="ObamaPersistenceUnit" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+        <class>br.ufrn.imd.obama.dominio.AutorMantenedor</class>
+        <class>br.ufrn.imd.obama.dominio.Comentario</class>
+        <class>br.ufrn.imd.obama.dominio.Descritor</class>
+        <class>br.ufrn.imd.obama.dominio.Disciplina</class>
+        <class>br.ufrn.imd.obama.dominio.Idioma</class>
+        <class>br.ufrn.imd.obama.dominio.NivelEnsino</class>
+        <class>br.ufrn.imd.obama.dominio.ObjetoAprendizagem</class>
+        <class>br.ufrn.imd.obama.dominio.PlanoDeAula</class>
+        <class>br.ufrn.imd.obama.dominio.Plataforma</class>
+        <class>br.ufrn.imd.obama.dominio.TipoLicencaUso</class>
+        <class>br.ufrn.imd.obama.dominio.TemaConteudo</class>
+        <class>br.ufrn.imd.obama.dominio.TipoObjeto</class>
+        <class>br.ufrn.imd.obama.dominio.Usuario</class>
+
+        <properties>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL94Dialect" />
+            <!--dados da conexao -->
+            <property name="javax.persistence.jdbc.driver"
+                      value="org.postgresql.Driver" />
+            <property name="javax.persistence.jdbc.url"
+                      value="jdbc:postgresql://localhost:5432/obamadev" />
+            <property name="javax.persistence.jdbc.user"
+                      value="postgres" />
+            <property name="javax.persistence.jdbc.password"
+                      value="postgres" />
+
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.show_sql" value="false"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hibernate.event.merge.entity_copy_observer" value="allow"/>
+
+            <property name="javax.persistence.validation.mode" value="NONE"/>
+        </properties>
+
+    </persistence-unit>
+</persistence>

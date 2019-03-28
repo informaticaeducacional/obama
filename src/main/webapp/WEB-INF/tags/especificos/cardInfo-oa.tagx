@@ -1,0 +1,37 @@
+<div xmlns:c="http://java.sun.com/jsp/jstl/core"
+        xmlns:jsp="http://java.sun.com/JSP/Page"
+        xmlns:fmt="http://java.sun.com/jsp/jstl/fmt"
+        xmlns:fn="http://java.sun.com/jsp/jstl/functions">
+
+    <c:set var="ctx" value="${pageContext.request.contextPath}"/>
+    <jsp:directive.attribute name="oa" required="true" type="br.ufrn.imd.obama.dominio.ObjetoAprendizagem" rtexprvalue="true" description="Titulo"/>
+    <jsp:directive.attribute name="classes" required="false" rtexprvalue="true"
+                             description="Classes do grid do painel"/>
+    <jsp:directive.attribute name="objetos" type="java.util.List"
+                             required="false" rtexprvalue="true" description="Opções do select"/>
+
+    <c:set var="type" value="${(empty type) ? 'text' : type}"/>
+    <c:set var="classes" value="${(empty classes) ? 'col s12 m12 l12' : classes}"/>
+
+    <p>
+        <c:if test="${not empty oa.autoresMantenedores}">
+            <b>Autor(es): </b>${oa.autoresMantenedores.get(0).nome}
+            <br/>
+            <b>Site do autor: </b><a href="${oa.autoresMantenedores.get(0).site}"
+                                     target="_blank">${oa.autoresMantenedores.get(0).site}</a>
+            <br/>
+            <c:if test="${not empty oa.autoresMantenedores.get(0).email}">
+                <b>E-mail do autor: </b>${oa.autoresMantenedores.get(0).email}
+            </c:if>
+            <br/>
+        </c:if>
+        <br/>
+        <b>Descritores:</b>
+        <br/>
+        <c:forEach items="${oa.descritores}" var="descritor">
+            ${descritor.descricaoCompleta}<br/>
+        </c:forEach>
+        <br/>
+    </p>
+
+</div>

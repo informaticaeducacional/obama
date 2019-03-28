@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.5.1.final using JasperReports Library version 6.5.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="PlanoDeAulaReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="34a257d3-a7cc-4386-aaea-25fbb96d9195">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="diretorio_base" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="titulo" class="java.lang.String"/>
+	<field name="autor" class="java.lang.String"/>
+	<field name="escola" class="java.lang.String"/>
+	<field name="nivelEnsino" class="java.lang.String"/>
+	<field name="anoEnsino" class="java.lang.String"/>
+	<field name="duracaoEmMinutos" class="java.lang.String"/>
+	<field name="resumo" class="java.lang.String"/>
+	<field name="objetosAprendizagem" class="java.lang.String"/>
+	<field name="objetivoGeral" class="java.lang.String"/>
+	<field name="objetivoEspecifico" class="java.lang.String"/>
+	<field name="metodologia" class="java.lang.String"/>
+	<field name="recursosAvaliativos" class="java.lang.String"/>
+	<field name="referencias" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="83" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="-1" width="110" height="82" uuid="30e534af-f892-4932-9b87-f6bdf4845485"/>
+				<imageExpression><![CDATA[$P{diretorio_base} + "resources/imagens/report/obama.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="89" y="-10" width="415" height="30" uuid="4a4d1e4e-be2d-435f-a3b5-aca9beaf0c47"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PLANO DE AULA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="89" y="14" width="415" height="30" uuid="f95caada-26c7-481b-a804-db474fe1a0c7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[OBJETOS DE APRENDIZAGEM PARA MATEMÁTICA - OBAMA]]></text>
+			</staticText>
+			<image>
+				<reportElement positionType="FixRelativeToBottom" x="505" y="0" width="50" height="80" uuid="5fb4bbdd-4202-4127-bf5e-3f1dd4b0ade1"/>
+				<imageExpression><![CDATA[$P{diretorio_base} + "resources/imagens/report/giife.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="128" y="44" width="337" height="30" uuid="1a4d692b-a030-42f6-8801-f330e8b4690b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[GRUPO INTERDISCIPLINAR DE ESTUDOS E PESQUISAS EM INFORMÁTICA NA EDUCAÇÃO (GIIfE)]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="190" splitType="Stretch">
+			<printWhenExpression><![CDATA[$V{PAGE_NUMBER}==1]]></printWhenExpression>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="FixRelativeToBottom" stretchType="RelativeToTallestObject" x="0" y="4" width="553" height="40" isPrintWhenDetailOverflows="true" uuid="b4b9b640-ff16-435c-aad8-04962f7b099d">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="html">
+					<font fontName="Arial" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{titulo}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="47" width="553" height="27" uuid="abd0c221-064b-4883-8a29-df17b31fff19">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Autor(es): "+$F{autor}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="2" y="77" width="105" height="22" uuid="aeaecf70-70bc-4117-b78e-0c6199135106"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Instituição de ensino:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="110" y="78" width="443" height="22" uuid="b53e5527-4bad-4439-af16-6fbe02012675">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{escola}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="2" y="104" width="105" height="22" uuid="5edee47d-f353-428d-9eaa-8865b3b9c3ca"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ano de ensino:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="110" y="105" width="443" height="22" uuid="f2255818-9b6f-4dee-a9c6-2e5fed1058a9">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{anoEnsino} + " - " +$F{nivelEnsino}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="110" y="132" width="443" height="21" uuid="7a9c6c3d-70ad-4f08-935a-3276a5dedf5f">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{duracaoEmMinutos}+" (minutos)"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="2" y="131" width="105" height="22" uuid="304f4750-4f80-47aa-b4b6-950e836a323d"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Duração da aula:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="157" width="105" height="33" uuid="ee2638e9-332b-43f0-a99c-91b35049ced9"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Objetos de aprendizagem:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="110" y="158" width="443" height="32" uuid="e0ce5672-c81e-4714-b4fa-4c4067eff4ee">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{objetosAprendizagem}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="311" splitType="Stretch">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="10" width="553" height="16" uuid="12f2bc86-98c7-4231-96d8-fc449698ba00">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Resumo"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="34" width="553" height="16" uuid="04771953-410f-4f9b-b771-274c0dc6109c"/>
+				<textElement markup="html">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{resumo}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="84" width="553" height="16" uuid="4d502d64-3d52-4763-ac4e-80b915a1462c"/>
+				<textElement markup="html">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{objetivoGeral}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="60" width="553" height="16" uuid="d8fa6bac-dfd2-4497-b7ba-a4f333a30630">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Objetivos gerais"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="133" width="553" height="16" uuid="a621cb1c-646d-4f42-a823-63da5c44fcaf"/>
+				<textElement markup="html">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{objetivoEspecifico}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="109" width="553" height="16" uuid="501ef224-4676-4e5f-bf62-9da50dfc1479">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Objetivos específicos"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="184" width="553" height="16" uuid="20a3b07e-70ef-4af4-93bf-b9effc8910d1"/>
+				<textElement markup="html">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{metodologia}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="160" width="553" height="16" uuid="f1ff74c6-e329-4b12-b31f-fe016bb8af8f">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Metodologia"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="234" width="553" height="16" uuid="2a7b59b4-7970-4ac3-b73d-2326bc0c429c"/>
+				<textElement markup="html">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{recursosAvaliativos}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="210" width="553" height="16" uuid="573bf086-f808-40d7-aaa5-da6870077ec8">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Recursos avaliativos"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="284" width="553" height="16" uuid="7b6a0241-8e62-4c47-bf2a-9be708b8edbb"/>
+				<textElement markup="html">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{referencias}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="0" y="260" width="553" height="16" uuid="87338731-0fc9-4f5a-a5a3-ae23ffb85f22">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Referências"]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<image>
+				<reportElement x="107" y="16" width="109" height="30" uuid="f5adc1cd-92f9-437c-8faf-b99e5ad0a5b8"/>
+				<imageExpression><![CDATA[$P{diretorio_base} + "resources/imagens/report/ufrn.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="226" y="16" width="88" height="30" uuid="35110d31-6503-44cd-8755-ef1e569ca65b"/>
+				<imageExpression><![CDATA[$P{diretorio_base} + "resources/imagens/report/imd.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="330" y="15" width="100" height="30" uuid="a6ab3a7c-a8bc-4147-aa12-4a8ab7adde33"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[obama.imd.ufrn.br
+obama@imd.ufrn.br]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

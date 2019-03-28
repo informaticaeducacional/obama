@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:fmt="http://java.sun.com/jsp/jstl/fmt"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions">
+
+	<c:set var="ctx" value="${pageContext.request.contextPath}" />
+	<jsp:directive.attribute name="oa" required="true"
+		type="br.ufrn.imd.obama.dominio.ObjetoAprendizagem" rtexprvalue="true"
+		description="Titulo" />
+	<jsp:directive.attribute name="classes" required="false"
+		rtexprvalue="true" description="Classes do grid do painel" />
+	<jsp:directive.attribute name="objetos" type="java.util.List"
+		required="false" rtexprvalue="true" description="Opções do select" />
+
+	<c:set var="type" value="${(empty type) ? 'text' : type}" />
+	<c:set var="classes"
+		value="${(empty classes) ? 'col s12 m12 l12' : classes}" />
+
+	<div id="divOA" class="col s12 m6 l4 xl3 loadmore" style="display: none;">
+		<div class="card">
+			<div class="card-image" style="height: 245px">
+				<a href="${oa.link}" target="_blank"> <img
+					class="responsive-img" style="height: 200px;"
+					src="${ctx}/oai/?file=${oa.id}" /> <span
+					class="card-title-span black-text">${oa.nome}</span>
+				</a>
+			</div>
+			<div class="card-content" style="height: 86px;">
+				<c:forEach items="${oa.conteudosPorNivel}" var="entry">
+                        ${entry.key.denominacao}
+                        <br />
+				</c:forEach>
+			</div>
+
+			<div class="card-action center">
+				<c:if test="${oa.tipoVisualizacao ne 2}">
+					<a class="waves-effect btn-flat" href="${oa.link}" target="_blank"
+						title="Fazer download"> <i class="material-icons grey-text">file_download</i>
+					</a>
+				</c:if>
+				<c:if test="${oa.tipoVisualizacao eq 2}">
+					<a class="waves-effect btn-flat" href="${oa.link}" target="_blank"
+						title="Visualizar"> <i class="material-icons grey-text">visibility</i>
+					</a>
+				</c:if>
+
+
+				<a id="${'info-oa-'.concat(oa.id)}"
+					class="waves-effect btn-flat modal-trigger"
+					href="${'#modal'.concat(oa.id)}" title="Mais informações"> <i
+					class="material-icons grey-text">info_outline</i>
+				</a> <span class="fb-share-button" data-href="https://obama.imd.ufrn.br"
+					data-layout="button" data-size="small" data-mobile-iframe="false">
+				<a class="fb-xfbml-parse-ignore waves-effect btn-flat"
+					target="_blank"
+					href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fobama.imd.ufrn.br%2FobjetosAprendizagem%2Fvisualizar%2F${oa.id}&amp;src=sdkpreparse">
+						<i class="material-icons grey-text">share</i>
+				</a>
+				</span>
+			</div>
+		</div>
+	</div>
+	<!-- Configuração do botão de compartilhar no facebook -->
+	<div id="fb-root"></div>
+	<script type="text/javascript">(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); 
+		  js.id = id;
+		  js.src = 'https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&amp;version=v2.10';
+		  fjs.parentNode.insertBefore(js, fjs);
+		  }(document, 'script', 'facebook-jssdk'));
+	</script>
+</div>

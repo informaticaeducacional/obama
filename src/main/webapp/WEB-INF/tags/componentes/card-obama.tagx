@@ -1,0 +1,29 @@
+<div class="row" xmlns:c="http://java.sun.com/jsp/jstl/core"
+     xmlns:jsp="http://java.sun.com/JSP/Page"
+     xmlns:fmt="http://java.sun.com/jsp/jstl/fmt"
+     xmlns:fn="http://java.sun.com/jsp/jstl/functions">
+
+    <c:set var="ctx" value="${pageContext.request.contextPath}"/>
+    <jsp:directive.attribute name="titulo" required="true" rtexprvalue="true" description="Chave do titulo"/>
+    <jsp:directive.attribute name="tipo" required="false" rtexprvalue="true" description="Tipo contextual do bootstrap"/>
+    <jsp:directive.attribute name="classes" required="false" rtexprvalue="true" description="Classes do grid do painel"/>
+    <jsp:directive.attribute name="comecarFechado" required="false" rtexprvalue="true"
+                             description="Se o painel deve comecar fechado"/>
+    <jsp:directive.attribute name="chevronTexto" required="false" rtexprvalue="true" description="Texto ao lado do Chevron"/>
+
+    <c:choose>
+        <c:when test="${empty classes}">
+            <c:set var="tamanhoGrid" value="col-md-12"/>
+        </c:when>
+        <c:otherwise>
+            <c:set var="tamanhoGrid" value="${classes}"/>
+        </c:otherwise>
+    </c:choose>
+
+    <div class="${tamanhoGrid}">
+        <div class="card-panel transparent-form">
+            <h4 class="col s12">${titulo}</h4>
+                <jsp:doBody/>
+        </div>
+    </div>
+</div>

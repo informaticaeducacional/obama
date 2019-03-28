@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<taglib
+        xmlns="http://java.sun.com/xml/ns/javaee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd"
+        version="2.1">
+    <display-name>Custom tags</display-name>
+    <tlib-version>1.0</tlib-version>
+    <short-name>tags</short-name>
+    <uri>tagSisInt</uri>
+
+    <!--tags para página inicial-->
+    <tag-file>
+        <name>layout</name>
+        <path>/WEB-INF/tags/layout.tagx</path>
+    </tag-file>
+
+    <tag-file>
+        <name>projeto</name>
+        <path>/WEB-INF/tags/projeto.tagx</path>
+    </tag-file>
+
+    <tag-file>
+        <name>nivelEnsino</name>
+        <path>/WEB-INF/tags/nivelEnsino.tagx</path>
+    </tag-file>
+
+    <tag-file>
+        <name>equipe</name>
+        <path>/WEB-INF/tags/equipe.tagx</path>
+    </tag-file>
+
+    <!--componentes-->
+    <tag-file>
+        <name>card-oa</name>
+        <path>/WEB-INF/tags/componentes/card-oa.tagx</path>
+    </tag-file>
+
+    <tag-file>
+        <name>modal</name>
+        <path>/WEB-INF/tags/componentes/modal.tagx</path>
+    </tag-file>
+
+    <tag-file>
+        <name>card-obama</name>
+        <path>/WEB-INF/tags/componentes/card-obama.tagx</path>
+    </tag-file>
+
+
+    <!--tags para formularios-->
+    <tag-file>
+        <name>input</name>
+        <path>/WEB-INF/tags/forms/input.tagx</path>
+    </tag-file>
+    <tag-file>
+        <name>select</name>
+        <path>/WEB-INF/tags/forms/select.tagx</path>
+    </tag-file>
+
+
+    <!--específicos-->
+    <tag-file>
+        <name>infoOA</name>
+        <path>/WEB-INF/tags/especificos/cardInfo-oa.tagx</path>
+    </tag-file>
+
+
+</taglib>

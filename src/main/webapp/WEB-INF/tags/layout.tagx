@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jsp:root xmlns:c="http://java.sun.com/jsp/jstl/core"
+          xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0"
+          xmlns:fmt="http://java.sun.com/jsp/jstl/fmt"
+          xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+          xmlns:tags="tagSisInt">
+    <html lang="en">
+
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="-1"/>
+    <jsp:directive.attribute name="cabecalho" fragment="true"/>
+    <jsp:directive.attribute name="rodape" fragment="true"/>
+
+    <head>
+        <meta charset="UTF-8"/>
+        <c:set var="ctx" value="${pageContext.request.contextPath}"/>
+
+        <title>Objetos de Aprendizagem para Matemática - OBAMA</title>
+        <!-- Favicon -->
+
+        <link rel="icon" type="image/x-icon" href="${ctx}/resources/imagens/favicon.ico"/>
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"/>
+        <link rel="stylesheet" href="${ctx}/resources/plugins/materialize/css/materialize.min.css"/>
+        <link rel="stylesheet" href="${ctx}/resources/css/css.css"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+        <c:if test="${redesSociais}">
+            <script src="${ctx}/resources/plugins/jquery/jquery.js"><c:out value = "" /></script>
+            <script src="${ctx}/resources/plugins/materialize/js/materialize.js"><c:out value = "" /></script>
+        </c:if>
+        <jsp:invoke fragment="cabecalho"/>
+    </head>
+    <body>
+
+    <div id="menu-principal" class="navbar">
+        <input type="hidden" id="url-base" value="${linkTo[InicioController].index}"/>
+
+        <nav class="nav-obama">
+        	<c:if test="${!isPaginaInicial}">
+	       		<div class="hide-on-med-and-down">
+		        	 <a
+		             href="${linkTo[InicioController].index}" class="brand-logo">
+		             <img src="${ctx}/resources/imagens/logos/OBAMA-logo.png" style="max-width: 20%; margin-left: 90px; margin-top: 15px;"/>
+		             </a>
+	             </div>
+	             <div class="hide-on-large-only">
+		             <a
+		             href="${linkTo[InicioController].index}" class="brand-logo center">
+		             <img src="${ctx}/resources/imagens/logos/OBAMA-logo.png" style="max-width: 50%; margin-top: 15px;"/>
+		             </a>
+				</div>
+			</c:if>
+            <ul class="right hide-on-med-and-down">
+                <li><a
+                        href="${linkTo[InicioController].index}" class="grey-text">Início</a></li>
+                <li><a class="grey-text" href="${linkTo[InicioController].equipe}">Equipe</a></li>
+                <li><a class="grey-text" href="${linkTo[InicioController].publicacoes}">Publicações</a></li>
+                <!--                 <li><a class="grey-text" href="${linkTo[PlanoDeAulaController].lista}">Notícias</a></li>            -->
+                <li><a class="grey-text" href="${linkTo[PlanoDeAulaController].lista}">Planos de aula</a></li>
+                <c:if test="${!usuarioLogado.isLogado()}">
+                    <li><a href="${linkTo[LoginController].form}"
+                           class="btn blue col pull-s2" id="btn-entrar">Acesse</a></li>
+                </c:if>
+                <c:if test="${usuarioLogado.isLogado()}">
+                    <li><a class='grey-text' href='${linkTo[LoginController].logout}'>
+                        Sair<i class="material-icons right">exit_to_app</i>
+                    </a></li>
+                </c:if>
+
+            </ul>
+            <c:if test="${usuarioLogado.isLogado()}">
+                <c:set var="statusBar" scope="session" value="fixed"/>
+            </c:if>
+            <c:if test="${!usuarioLogado.isLogado()}">
+                <c:set var="statusBar" scope="session" value=""/>
+            </c:if>
+            <ul id="slide-out" class="sidenav sidenav-${statusBar}">
+                <li id="perfil-info">
+                    <div class="user-view center">
+                        <div class="background">
+                            <img style="width: 100%" src="${ctx}/resources/imagens/logos/logo-sidenav-2.png"/>
+                        </div>
+
+                        <div class="row">
+                            <a href="#name"><span id="nome-usuario"
+                                    class="white-text name col s12">${usuarioLogado.usuario.nome}</span></a>
+                            <a href="#email"><span
+                                    class="white-text email col s12">${usuarioLogado.usuario.email}</span></a>
+                            <div class="row">
+                                <a href="#name" class="white-text email col s12 right"><i class="material-icons"><c:out
+                                        value=""/></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li id="perfil-info-sm">
+                    <div class="user-view center">
+                        <div class="background">
+                            <img style="width: 100%" src=""/>
+                        </div>
+
+                        <div class="row">
+                            <a href="#name"><span class="white-text name col s12"></span></a>
+                            <a href="#email"><span class="white-text email col s12"></span></a>
+                            <div class="row">
+                                <a href="#name" class="white-text email col s12 right"><i class="material-icons"><c:out
+                                        value=""/></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="no-padding">
+                    <ul class="collapsible collapsible-accordion">
+       	                <li class="bold">
+       	                	<a href="${linkTo[InicioController].index}" class="collapsible-header">
+       	                		<i class="large material-icons">home</i>
+                            	<div class="li-control">Início</div>
+                            </a>
+                        </li>
+                        <li class="bold">
+       	                	<a href="${linkTo[InicioController].equipe}" class="collapsible-header">
+       	                		<i class="large material-icons">group</i>
+                            	<div class="li-control">Equipe</div>
+                            </a>
+                        </li>
+                        <li class="bold">
+       	                	<a href="${linkTo[InicioController].publicacoes}" class="collapsible-header">
+       	                		<i class="large material-icons">local_library</i>
+                            	<div class="li-control">Publicações</div>
+                            </a>
+                        </li>		                    	
+                        <li class="bold"><a class="collapsible-header" tabindex="0">
+                            <i class="large material-icons">important_devices</i>
+                            <div class="li-control">Objetos de Aprendizagem</div>
+                        </a>
+                            <div class="collapsible-body">
+                                <ul>
+                                    <c:if test="${isAdministrador}">
+                                        <li><a href="${linkTo[ObjetosAprendizagemController].cadastro}">Novo</a></li>
+                                    </c:if>
+                                    <c:if test="${isRevisor}">
+                                        <li><a href="${linkTo[ObjetosAprendizagemController].gerenciar}">Gerenciar</a></li>
+                                    </c:if>
+                                    <li><a href="${linkTo[ObjetosAprendizagemController].busca}">Buscar</a></li>
+                                    <c:if test="${usuarioLogado.isLogado()}">
+                                    <li><a href="${linkTo[ObjetosAprendizagemController].sugestao}">Sugerir OA</a></li>
+                                    </c:if>
+                                </ul>
+                            </div>
+                        </li>
+                        <c:if test="${!usuarioLogado.isLogado()}">
+	                        <li class="bold"><a class="collapsible-header" tabindex="0" href="${linkTo[PlanoDeAulaController].lista}">
+		                            <i class="large material-icons">description</i>
+		                            <div class="li-control">Plano de aula</div>
+	                            </a>
+	                        </li>
+                        </c:if>
+                        <c:if test="${usuarioLogado.isLogado()}">
+	                        <li class="bold"><a class="collapsible-header" tabindex="0">
+	                            <i class="large material-icons">description</i>
+	                            <div class="li-control">Plano de aula</div>
+	                        </a>
+	                            <div class="collapsible-body" style="">
+	                                <ul>
+	                                    <li><a href="${linkTo[PlanoDeAulaController].form}">Novo</a></li>
+	                                    <li>
+	                                        <a href="${linkTo[PlanoDeAulaController].meusPlanosDeAula}">Meus planos de aula</a>
+	                                    </li>
+	                                    <c:if test="${isRevisor}">
+	                                        <li>
+	                                            <a href="${linkTo[PlanoDeAulaController].planosPendentes}">Aguardando revisão</a>
+	                                        </li>
+	                                    </c:if>
+	                                    <li><a href="${linkTo[PlanoDeAulaController].lista}">Buscar</a></li>
+	                                </ul>
+	                            </div>
+	                        </li>
+                        </c:if>
+                        <c:if test="${isAdministrador}">
+                            <li class="bold">
+                                <a class="collapsible-header" tabindex="0">
+                                    <i class="large material-icons">person</i>
+                                    <div class="li-control">Usuários</div>
+                                </a>
+                                <div class="collapsible-body">
+                                    <ul>
+                                        <li><a href="${linkTo[UsuarioController].lista}">Gerenciar</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </c:if>
+                    </ul>
+                </li>
+            </ul>
+            <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons black-text larger">menu</i></a>
+        </nav>
+
+    </div>
+    <input id="msgsSite" type="hidden" value="${mensagem}"/>
+    <main>
+        <div class="container-obama">
+            <jsp:doBody/>
+        </div>
+    </main>
+    <footer class="page-footer">
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="row">
+	                <div class="col s12">		                	
+						<a class="grey-text col s12 l6">Objetos de Aprendizagem para Matemática (OBAMA) - 2018</a>
+						<a class="grey-text col s12 l2" href="http://bit.ly/suporte_obama" target="_blank"><i
+			                                class="material-icons left">message</i>Suporte técnico</a>
+						<a class="grey-text col s12 l3" href="http://www.freepik.com">Algumas imagens são do Freepik</a>
+						<a class="grey-text col s12 l1" target="_blank" rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img
+		                                    alt="Licença Creative Commons" style="border-width:0"
+		                                    src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"/></a>
+						
+					</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="${ctx}/resources/plugins/jquery/jquery.js"><c:out value = "" /></script>
+    <script src="${ctx}/resources/plugins/materialize/js/materialize.js"><c:out value = "" /></script>
+    <script src="${ctx}/resources/plugins/moment/moment.js"><c:out value = "" /></script>
+    <script src="${ctx}/resources/plugins/moment/moment-with-locales.js"><c:out value = "" /></script>
+    <script src="${ctx}/resources/js/obama.js"><c:out value = "" /></script>
+    <script src="${ctx}/resources/js/mensagens.js"><c:out value = "" /></script>
+
+    <jsp:invoke fragment="rodape"/>
+    </body>
+
+    </html>
+</jsp:root>

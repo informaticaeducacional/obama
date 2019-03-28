@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core"
+     xmlns:jsp="http://java.sun.com/JSP/Page"
+     xmlns:fmt="http://java.sun.com/jsp/jstl/fmt"
+     xmlns:fn="http://java.sun.com/jsp/jstl/functions">
+
+    <c:set var="ctx" value="${pageContext.request.contextPath}"/>
+    <jsp:directive.attribute name="id" required="false" rtexprvalue="true" description="Id do input"/>
+    <jsp:directive.attribute name="name" required="true" rtexprvalue="true" description="Name"/>
+    <jsp:directive.attribute name="value" required="true" rtexprvalue="true" description="Valor"/>
+    <jsp:directive.attribute name="type" required="false" rtexprvalue="true" description="Tipo"/>
+    <jsp:directive.attribute name="titulo" required="true" rtexprvalue="true" description="Titulo"/>
+    <jsp:directive.attribute name="classes" required="false" rtexprvalue="true" description="Classes do grid do painel"/>
+    <jsp:directive.attribute name="required" required="false" rtexprvalue="false" description="Campo obrigatÃ³rio"/>
+
+    <c:set var="type" value="${(empty type) ? 'text' : type}" />
+    <c:set var="classes" value="${(empty classes) ? 'col s12 m12 l12' : classes}" />
+    <c:set var="required" value="${(empty required) ? false : required}" />
+
+    <div class="input-field ${classes} campo-busca">
+        <input id="${id}" name="${name}" value="${value}" type="${type}"  />
+        <label for="busca" class="hide-on-med-and-down">${titulo}</label>
+    </div>
+
+</div>

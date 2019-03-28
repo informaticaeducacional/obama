@@ -1,0 +1,24 @@
+<div id="${id}" class="modal"
+     xmlns:c="http://java.sun.com/jsp/jstl/core"
+     xmlns:jsp="http://java.sun.com/JSP/Page"
+     xmlns:fmt="http://java.sun.com/jsp/jstl/fmt"
+     xmlns:fn="http://java.sun.com/jsp/jstl/functions">
+
+    <c:set var="ctx" value="${pageContext.request.contextPath}"/>
+    <jsp:directive.attribute name="id" required="false" rtexprvalue="true" description="Id do input"/>
+    <jsp:directive.attribute name="titulo" required="true" rtexprvalue="true" description="Titulo"/>
+    <jsp:directive.attribute name="classes" required="false" rtexprvalue="true" description="Classes do grid do painel"/>
+
+    <c:set var="type" value="${(empty type) ? 'text' : type}" />
+    <c:set var="classes" value="${(empty classes) ? 'col s12 m12 l12' : classes}" />
+
+    <div class="modal-content">
+        <h4>${titulo}</h4>
+        <jsp:doBody/>
+    </div>
+
+    <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close btn-flat btn-modal grey lighten-2">OK</a>
+    </div>
+
+</div>

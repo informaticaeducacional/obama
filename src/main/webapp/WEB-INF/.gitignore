@@ -1,0 +1,14 @@
+/target/
+/LICENSE.txt
+/MANIFEST.MF
+/NOTICE.txt
+*.classpath
+*.project
+.settings/
+
+# Java class files
+*.class
+
+# Local configuration file (sdk path, etc)
+local.properties
+/.tern-project

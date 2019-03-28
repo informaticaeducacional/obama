@@ -1,0 +1,343 @@
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+	background-image: url('../imagens/background.jpeg');
+	background-repeat: repeat;
+	background-color:#424242;
+	display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+ main {
+     flex: 1 0 auto;
+ }
+
+.transparent-form {
+	background: rgba(150, 150, 150, 0.2);
+	min-height: 100px;
+	overflow: hidden;
+}
+
+.blue-fb, .blue-fb:hover {
+	background-color: #4267b2 !important;
+}
+
+.input-field input[type=email]:focus, .input-field input[type=text]:focus, .input-field input[type=password]:focus, .input-field input[type=number]:focus {
+	border-bottom: 1px solid #424242 !important;
+	box-shadow: 0 1px 0 0 #424242 !important;
+}
+
+
+input[type=search], input[type=search]:focus {
+	box-shadow: 0 0 0 0 #424242 !important;
+	border-bottom: 1px solid #9e9e9e !important;
+	color: #424242 !important;
+}
+
+@media only screen and (max-width: 640px) {
+	#DataTables_Table_0_filter, #DataTables_Table_1_filter {
+		width: 100% !important;
+	}
+}
+
+@media only screen and (min-width: 645px) {
+	#DataTables_Table_0_filter, #DataTables_Table_1_filter {
+		width: 50% !important;
+	}
+}
+
+input[type=search], .input-field input[type=text]+label, .input-field input[type=email]+label, .input-field input[type=password]+label, .input-field input[type=number]+label {
+	color: #9e9e9e !important;
+}
+
+.nav-obama {
+	background-color: transparent;
+	box-shadow: 0px 0px;
+}
+
+.transparent-menu {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+
+.select-obama {
+    background-color: transparent;
+    border-color: transparent;
+    border-bottom-color: slategray;
+    border-radius: unset;
+}
+
+
+
+.btn-flat {
+    margin-right: 0px !important;
+}
+
+.card-action {
+    padding-right: 5px !important;
+    padding-left: 5px !important;
+}
+/*
+Css para barra lateral
+*/
+.li-control {
+    display: none;
+}
+
+.sidenav {
+    width: 58px;
+}
+
+.navbar-fixed {
+    z-index: 998;
+}
+
+#perfil-info {
+    display: none;
+}
+
+.container-obama {
+    padding-left: 90px;
+    padding-right: 32px;
+}
+
+@media only screen and (max-width: 990px) {
+    .sidenav {
+        width: 300px !important;
+    }
+    .li-control {
+        display: unset !important;
+    }
+
+    #perfil-info {
+        display: unset !important;
+    }
+    .container-obama {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+}
+
+.btn-remover-oa {
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #d31a1a;
+}
+.btn-adicionar {
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #1a75d3;
+}
+
+.card-title-span {
+    font-size: medium;
+    padding-left: 16px;
+    padding-right:  16px;
+    padding-top:  8px;
+    padding-bottom:  8px;
+}
+
+
+/*
+Tabs dos formulários
+*/
+.tabs .tab a, .tabs .tab a:hover, .tabs .tab a.active{
+    color:  #1f59aa !important;
+}
+.tabs .indicator {
+    background-color: #1f59aa;
+}
+
+.tabs, .tabs .tab a:focus, .tabs .tab a:focus.active {
+    background-color: rgba(156, 156, 156, 0.13) !important;
+}
+
+.tabela-planoDeAula-form {
+    max-height: 400px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.dropdown-content li>span {
+    color: #424242 !important;
+}
+
+.select-wrapper input.select-dropdown:focus {
+    border-bottom: 2px solid #424242 !important;
+}
+
+.radio-inline {
+    display: inline;
+}
+
+.table-col-left {
+    width: 10%;
+    float: left;
+}
+
+.table-col-right {
+    width: 40%;
+    float: right;
+}
+.dataTables_filter {
+    float:right;
+}
+
+.input-field .prefix.active {
+	color: black;
+}
+
+/** Personalização da apresentação da equipe*/
+.v .display-avatar {
+    min-height: 1px;
+}
+
+.content-avatar .display-avatar {
+    float: left;
+    box-sizing: border-box;
+    padding: 0 .75rem;
+    min-height: 1px;
+}
+
+/*@media only screen and (min-width: 601px)*/
+.content-avatar .display-avatar .kr {
+    width: 33.3333333333%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+}
+
+.v .l {
+    color: #444;
+}
+.content-avatar {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+.content-avatar:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.full-size .avatar-wrapper .k {
+    width: 100%;
+    padding-bottom: 100%;
+}
+.avatar-wrapper .k {
+    display: block;
+    overflow: hidden;
+    height: 50px;
+    width: 50px;
+}
+.aa, .avatar-wrapper .k {
+    border-radius: 50%;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+.full-size .avatar-wrapper .k img {
+    width: 100%;
+    border: 0;
+}
+.avatar-wrapper .k {
+    display: block;
+    overflow: hidden;
+    height: 50px;
+    width: 50px;
+}
+.full-size .avatar-wrapper .k::after {
+    border-width: 10px;
+}
+.full-size .avatar-wrapper {
+    display: block;
+    width: 80%;
+    max-width: 150px;
+    margin: 0 auto;
+    margin-top: 20px !important;
+    margin-bottom: 10px !important;
+}
+.avatar-wrapper {
+    position: relative;
+    display: inline-block;
+}
+.full-size .avatar-wrapper::after {
+    border-width: 4px;
+}
+.avatar-wrapper::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid rgba(255,255,255,0.5);
+    transition: transform .15s, border-color .15s;
+}
+.content-avatar .display-avatar.iv {
+    margin-left: auto;
+    left: auto;
+    right: auto;
+}
+
+.label-title {
+    font-size: 1.7rem;
+    color: black;
+}
+.avatar-name a{
+	color: black;
+}
+.avatar-name a:hover{
+	text-decoration: underline;
+}
+/*Fim - Personalização da apresentação da equipe*/
+
+.collapsable-publi {
+	margin-left: 0px !important;
+	margin-right: 0px !important;
+}
+
+.collapsible-header , .collapsible-body {
+	background: rgba(255, 255, 255, 0.5) !important;
+}
+
+/*Cores dos botões*/
+.icon-vermelho {
+	color: #ff7474;
+}
+
+.icon-roxo {
+	color: #813f6e;
+}
+.icon-laranja {
+	color: #ffc476;
+}
+
+.icon-verde {
+	color:  #bede67;
+}
+
+.icon-black {
+	color: #424242;
+}
+/*Fim - Cores dos botões*/
+
+/*Formatação do do footer*/
+.page-footer, .footer-copyright {
+	background-color: transparent !important;
+	padding-bottom: 0px;
+	padding-top: 0px;
+}
+.page-footer, .footer-copyright > div > div.row{
+	margin-bottom: 0px;
+}
+/*Fim - Formatação footer*/
+li.bold:hover {
+	background-color: #e0e0e0;
+}

@@ -1,0 +1,51 @@
+<div class="container container-conteudo features ">
+    <h4 class="center">O PROJETO</h4>
+    <div id="projeto" class="feature scrollspy">
+        <div class="feature-icon">
+            <img src="${ctx}/resources/imagens/2016_OBAMA_Concept-04.png"/>
+        </div>
+        <!-- 							<h5 class="">O Projeto</h5> -->
+        <p>
+            O Projeto Objetos de Aprendizagem para Matemática (OBAMA) é um fruto
+            de pesquisa científica e de desenvolvimento que culminou com a
+            reestruturação de um repositório de objetos de aprendizagem (OA)
+            para o ensino e aprendizagem de conceitos matemáticos. O OBAMA é uma
+            catalogação de OA classificados a partir de critérios pedagógicos e
+            técnicos, como conteúdos explorados e habilidades que podem ser
+            desenvolvidas e plataforma de funcionamento <em>(desktop</em> ou <em>mobile)</em>.
+            Além do desenvolvimento do repositório para ajudar professores da
+            Educação Básica a encontrar recurso educativos digitais para
+            diversificar as estratégias de ensino de Matemática em sala de aula,
+            o OBAMA intenciona formar docentes para a busca, utilização e
+            integração dos OA em processos de ensino e aprendizagem. Em projetos
+            futuros, espera-se que o OBAMA forneça elementos para justificar o
+            desenvolvimento de outros recursos dessa natureza.
+            <br/>
+            <br/>
+            O OBAMA conta com uma equipe
+            interdisciplinar, composta por alunos e professores da Universidade
+            Federal do Rio Grande do Norte (UFRN), que contribui para que o
+            repositório atenda aspectos inerentes a interseção entre a área de
+            Tecnologia da Informação (TI) e Educação. Além de professores do
+            Instituto Metrópole Digital (IMD), estão entre os membros da equipe,
+            alunos das Licenciaturas em Pedagogia e Matemática e do Bacharelado
+            em Tecnologia da Informação (BTI). O repositório foi inicialmente
+            concebido no Grupo de Pesquisa Matemática e Ensino (MAES) da
+            Universidade Estadual do Ceará (UECE), sob a coordenação do Prof.
+            Dr. Dennys Leite Maia. Com a reestruturação, o OBAMA passa a
+            integrar as ações do Grupo Interdisciplinar de Pesquisa e Estudos de
+            Informática na Educação (GIIfE), da UFRN.
+            <br/>
+            <br/>
+            Os recursos educativos digitais disponibilizados no OBAMA, sejam OA ou apps para
+            dispositivos móveis, além de possuírem objetivos pedagógicos claro e definidos,
+            estão licenciados sob licenças livres e criativas, como Creative Commons, que permite
+            o uso irrestrito de recursos digitais, desde que sejam citadas as fontes e a
+            autoria da produção ou outras licenças livres.
+            <br/>
+            <br/>
+            Acesse a primeira versão do OBAMA em: <a href="http://j.mp/projeto_obama"
+                                                     target="_blank">j.mp/projeto_obama</a>
+        </p>
+    </div>
+</div>
